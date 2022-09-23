@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "raceresults",
+  "info": {
+    "name": "raceresults",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "price": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "place": {
+      "type": "integer"
+    },
+    "race": {
+      "model": "races"
+    },
+    "user": {
+      "model": "users"
+    }
+  }
+}

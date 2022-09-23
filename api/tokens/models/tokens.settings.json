@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tokens",
+  "info": {
+    "name": "tokens",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "tokenString": {
+      "type": "string"
+    },
+    "user": {
+      "model": "users"
+    }
+  }
+}

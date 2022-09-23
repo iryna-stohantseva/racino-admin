@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/enterraces",
+      "handler": "enterraces.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/enterraces/count",
+      "handler": "enterraces.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/enterraces/:id",
+      "handler": "enterraces.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/enterraces",
+      "handler": "enterraces.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/enterraces/:id",
+      "handler": "enterraces.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/enterraces/:id",
+      "handler": "enterraces.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

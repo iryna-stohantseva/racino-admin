@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "marketplaces",
+  "info": {
+    "name": "marketplaces",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "vehicleName": {
+      "type": "string"
+    },
+    "ownerName": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "integer"
+    },
+    "image": {
+      "type": "string"
+    },
+    "img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

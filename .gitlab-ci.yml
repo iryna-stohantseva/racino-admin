@@ -1,0 +1,37 @@
+prod_artefy_cms:
+  stage: deploy
+  environment:
+    name: prod_artefy_cms
+    url: https://admin.artefy.io/
+  before_script:
+    - "which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )"
+    - mkdir -p ~/.ssh
+    - eval $(ssh-agent -s)
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - echo "Deploy to dev server CMS"
+    - ssh-add <(echo "$PROD_SSH_KEY")
+    - rm -rf .git
+    - ssh -o StrictHostKeyChecking=no artefy@3.104.35.180 "cd /var/www/html/artefy-cms; git reset --hard; git pull origin main; npm install; npm run build; pm2 reload cms; exit"
+  only:
+    - main
+
+
+
+develop_artefy_cms:
+  stage: deploy
+  environment:
+    name: development_artefy_cms
+    url: https://dev-admin.artefy.io/
+  before_script:
+    - "which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )"
+    - mkdir -p ~/.ssh
+    - eval $(ssh-agent -s)
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - echo "Deploy to dev server CMS"
+    - ssh-add <(echo "$P_SSH_KEY")
+    - rm -rf .git
+    - ssh -o StrictHostKeyChecking=no artefy@54.253.85.86 "cd /var/www/html/artefy-cms; git reset --hard; git pull origin develop; npm install; npm run build; pm2 reload artefy-dev-cms; exit"
+  only:
+    - develop

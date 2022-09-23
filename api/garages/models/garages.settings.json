@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "garages",
+  "info": {
+    "name": "garages",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "frontWing": {
+      "type": "string"
+    },
+    "rearWing": {
+      "type": "string"
+    },
+    "underFloor": {
+      "type": "string"
+    },
+    "bargeBoards": {
+      "type": "string"
+    },
+    "sidePods": {
+      "type": "string"
+    },
+    "engineCover": {
+      "type": "string"
+    },
+    "frontNose": {
+      "type": "string"
+    },
+    "engine": {
+      "type": "string"
+    },
+    "hybridPower": {
+      "type": "string"
+    },
+    "breaks": {
+      "type": "string"
+    },
+    "wheels": {
+      "type": "string"
+    },
+    "tires": {
+      "type": "string"
+    },
+    "suspension": {
+      "type": "string"
+    },
+    "vehicleWrap": {
+      "type": "string"
+    },
+    "wrapName": {
+      "type": "string"
+    },
+    "transmission": {
+      "type": "string"
+    },
+    "rimStyles": {
+      "type": "string"
+    },
+    "mirrors": {
+      "type": "string"
+    },
+    "img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

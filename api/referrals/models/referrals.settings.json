@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "referrals",
+  "info": {
+    "name": "referrals",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userId": {
+      "model": "users"
+    },
+    "referralEmail": {
+      "type": "string"
+    }
+  }
+}

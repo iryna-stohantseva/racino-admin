@@ -1,0 +1,25 @@
+name: Check Set-Up & Build
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ develop ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  check:
+    # The type of runner that the job will run on
+    runs-on: [self-hosted, Linux, X64, racino-cms]
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      - name: Set-Up
+        run: |
+          cd /home/cms/racino-cms
+          git reset --hard
+          git pull origin develop
+          npm install 
+          npm run build
+          pm2 restart cms

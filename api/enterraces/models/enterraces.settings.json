@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enterraces",
+  "info": {
+    "name": "enterraces"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userId": {
+      "model": "users"
+    },
+    "raceId": {
+      "model": "races"
+    },
+    "vehicleId": {
+      "model": "garages"
+    },
+    "LaneNo": {
+      "type": "integer"
+    }
+  }
+}

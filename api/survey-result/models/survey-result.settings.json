@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "survey_results",
+  "info": {
+    "name": "survey result",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "model": "users"
+    },
+    "survey": {
+      "model": "quiz"
+    },
+    "answer": {
+      "type": "string"
+    },
+    "question": {
+      "model": "question"
+    }
+  }
+}

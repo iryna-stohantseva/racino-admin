@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "races",
+  "info": {
+    "name": "races",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "entryFee": {
+      "type": "string"
+    },
+    "prizePool": {
+      "type": "integer"
+    },
+    "totalParticipant": {
+      "type": "integer"
+    },
+    "runIn": {
+      "type": "datetime"
+    },
+    "track": {
+      "model": "tracks"
+    },
+    "raceParticipant": {
+      "collection": "enterraces"
+    },
+    "raceType": {
+      "type": "enumeration",
+      "enum": [
+        "practice",
+        "tournament",
+        "qualifying"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Active",
+        "Deactive"
+      ]
+    }
+  }
+}

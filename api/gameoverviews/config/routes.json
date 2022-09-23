@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/gameoverviews",
+      "handler": "gameoverviews.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gameoverviews/count",
+      "handler": "gameoverviews.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gameoverviews/:id",
+      "handler": "gameoverviews.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/gameoverviews",
+      "handler": "gameoverviews.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/gameoverviews/:id",
+      "handler": "gameoverviews.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/gameoverviews/:id",
+      "handler": "gameoverviews.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

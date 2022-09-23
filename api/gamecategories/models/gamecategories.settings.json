@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gamecategories",
+  "info": {
+    "name": "gamecategories",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cateName": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}
